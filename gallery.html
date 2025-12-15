@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery - Lefika Hearts</title>
+    <meta name="description" content="View photos and videos from Lefika Hearts' events, programs, and community initiatives.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1a4d3a',
+                        'gold': '#d4af37',
+                        'light-green': '#2d5a47',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="bg-white text-dark-green shadow sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+        <div class="relative flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img 
+                    src="Lefika Hearts Pics/Lefikahearts Logo-01.png" 
+                    alt="Lefika Hearts Logo" 
+                    class="h-24 w-auto object-contain -my-6"
+                />
+            </a>
+
+            <!-- Center Navigation -->
+            <ul class="hidden md:flex items-center space-x-8 
+                       absolute left-2/4 transform -translate-x-2/4">
+                <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-gold transition">About</a></li>
+                <li><a href="programs.html" class="hover:text-gold transition">Programs</a></li>
+                <li><a href="impact.html" class="hover:text-gold transition">Impact</a></li>
+                <li><a href="gallery.html" class="hover:text-gold transition text-gold">Gallery</a></li>
+                <li><a href="transparency.html" class="hover:text-gold transition">Transparency</a></li>
+                <li><a href="contact.html" class="hover:text-gold transition">Contact</a></li>
+            </ul>
+
+            <!-- Right CTAs -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="get-involved.html" 
+                   class="border border-dark-green px-4 py-2 rounded-lg 
+                          hover:bg-dark-green hover:text-white transition">
+                    Get Involved
+                </a>
+                <a href="get-involved.html" 
+                   class="bg-gold text-dark-green px-5 py-2 rounded-lg font-semibold 
+                          hover:bg-opacity-90 transition">
+                    Donate
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-dark-green" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul class="hidden md:hidden pb-4 space-y-3 text-dark-green" id="mobile-menu">
+            <li><a href="index.html" class="block hover:text-gold">Home</a></li>
+            <li><a href="about.html" class="block hover:text-gold">About</a></li>
+            <li><a href="programs.html" class="block hover:text-gold">Programs</a></li>
+            <li><a href="impact.html" class="block hover:text-gold">Impact</a></li>
+            <li><a href="gallery.html" class="block hover:text-gold">Gallery</a></li>
+            <li><a href="transparency.html" class="block hover:text-gold">Transparency</a></li>
+            <li><a href="contact.html" class="block hover:text-gold">Contact</a></li>
+
+            <li class="pt-3">
+                <a href="get-involved.html" 
+                   class="block border border-dark-green px-4 py-2 rounded-lg text-center">
+                    Get Involved
+                </a>
+            </li>
+            <li>
+                <a href="get-involved.html" 
+                   class="block bg-gold text-dark-green px-4 py-2 rounded-lg text-center font-semibold">
+                    Donate
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+    <section class="bg-gradient-to-br from-dark-green to-light-green text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-center">Media Gallery</h1>
+            <p class="text-xl text-center mt-4 text-gray-200">Capturing moments of impact, joy, and transformation</p>
+        </div>
+    </section>
+
+    <!-- Gallery Sections -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <!-- Isaacson Primary School - Walk With Pride -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-dark-green mb-8 text-center">Isaacson Primary School - Walk With Pride (November 2025)</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/008.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/009.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/010.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/011.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/012.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/013.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/014.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/025.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/026.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/027.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/028.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/029.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/030.jpg" alt="Isaacson Primary School Event" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mochochonono Primary School - Graduation -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-dark-green mb-8 text-center">Mochochonono Primary School - Graduation Day (November 2025)</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 13 November 2025 Graduation Day/001.jpg" alt="Mochochonono Graduation" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 13 November 2025 Graduation Day/002.jpg" alt="Mochochonono Graduation" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 13 November 2025 Graduation Day/003.jpg" alt="Mochochonono Graduation" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 13 November 2025 Graduation Day/004.jpg" alt="Mochochonono Graduation" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 13 November 2025 Graduation Day/005.jpg" alt="Mochochonono Graduation" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 13 November 2025 Graduation Day/006.jpg" alt="Mochochonono Graduation" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mochochonono Primary School - Walk With Pride -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-dark-green mb-8 text-center">Mochochonono Primary School - Walk With Pride (July 2025)</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/015.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/016.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/017.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/018.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/019.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/020.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/021.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/022.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/023.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                        <img src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/024.jpg" alt="Mochochonono Walk With Pride" class="w-full h-64 object-cover" onclick="openModal(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="absolute top-4 right-8 text-white text-4xl font-bold cursor-pointer hover:text-gold" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Gallery Image">
+    </div>
+
+<!-- Footer -->
+<footer class="bg-white text-gray-700 py-12 border-t border-gray-200">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+            <!-- Brand -->
+            <div>
+                <img src="Lefika Hearts Pics/Lefikahearts Logo-01.png"
+                     alt="Lefika Hearts Logo"
+                     class="h-32 w-auto mb-4">
+                <p class="text-gray-600">
+                    Building Stronger Communities, One Heart at a Time
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-gold transition">About Us</a></li>
+                    <li><a href="programs.html" class="hover:text-gold transition">Programs</a></li>
+                    <li><a href="impact.html" class="hover:text-gold transition">Impact</a></li>
+                    <li><a href="transparency.html" class="hover:text-gold transition">Transparency</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Involved -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Get Involved</h4>
+                <ul class="space-y-2">
+                    <li><a href="get-involved.html" class="hover:text-gold transition">Donate</a></li>
+                    <li><a href="get-involved.html#volunteer" class="hover:text-gold transition">Volunteer</a></li>
+                    <li><a href="get-involved.html#partner" class="hover:text-gold transition">Partner</a></li>
+                    <li><a href="contact.html" class="hover:text-gold transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4 text-dark-green">
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-200 pt-6 text-center text-gray-500 text-sm">
+            <p>
+                &copy; 2025 Lefika Hearts. All rights reserved. |
+                Registered NPO | Section 18A Certified
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = imgSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+

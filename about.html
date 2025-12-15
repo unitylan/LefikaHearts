@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lefika Hearts</title>
+    <meta name="description" content="Learn about Lefika Hearts' mission, vision, values, and our commitment to building stronger communities.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1a4d3a',
+                        'gold': '#d4af37',
+                        'light-green': '#2d5a47',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="bg-white text-dark-green shadow sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+        <div class="relative flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img 
+                    src="Lefika Hearts Pics/Lefikahearts Logo-01.png" 
+                    alt="Lefika Hearts Logo" 
+                    class="h-24 w-auto object-contain -my-6"
+                />
+            </a>
+
+            <!-- Center Navigation -->
+            <ul class="hidden md:flex items-center space-x-8 
+                       absolute left-2/4 transform -translate-x-2/4">
+                <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-gold transition text-gold">About</a></li>
+                <li><a href="programs.html" class="hover:text-gold transition">Programs</a></li>
+                <li><a href="impact.html" class="hover:text-gold transition">Impact</a></li>
+                <li><a href="gallery.html" class="hover:text-gold transition">Gallery</a></li>
+                <li><a href="transparency.html" class="hover:text-gold transition">Transparency</a></li>
+                <li><a href="contact.html" class="hover:text-gold transition">Contact</a></li>
+            </ul>
+
+            <!-- Right CTAs -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="get-involved.html" 
+                   class="border border-dark-green px-4 py-2 rounded-lg 
+                          hover:bg-dark-green hover:text-white transition">
+                    Get Involved
+                </a>
+                <a href="get-involved.html" 
+                   class="bg-gold text-dark-green px-5 py-2 rounded-lg font-semibold 
+                          hover:bg-opacity-90 transition">
+                    Donate
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-dark-green" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul class="hidden md:hidden pb-4 space-y-3 text-dark-green" id="mobile-menu">
+            <li><a href="index.html" class="block hover:text-gold">Home</a></li>
+            <li><a href="about.html" class="block hover:text-gold">About</a></li>
+            <li><a href="programs.html" class="block hover:text-gold">Programs</a></li>
+            <li><a href="impact.html" class="block hover:text-gold">Impact</a></li>
+            <li><a href="gallery.html" class="block hover:text-gold">Gallery</a></li>
+            <li><a href="transparency.html" class="block hover:text-gold">Transparency</a></li>
+            <li><a href="contact.html" class="block hover:text-gold">Contact</a></li>
+
+            <li class="pt-3">
+                <a href="get-involved.html" 
+                   class="block border border-dark-green px-4 py-2 rounded-lg text-center">
+                    Get Involved
+                </a>
+            </li>
+            <li>
+                <a href="get-involved.html" 
+                   class="block bg-gold text-dark-green px-4 py-2 rounded-lg text-center font-semibold">
+                    Donate
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-dark-green to-light-green text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-center">About Lefika Hearts</h1>
+            <p class="text-xl text-center mt-4 text-gray-200">Building Stronger Communities, One Heart at a Time</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-8 text-center">Our Story</h2>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Lefika Hearts NPC draws its name from the Setswana word "Lefika," meaning "rock,"
+                        symbolizing strength, resilience, and a solid foundation. The organization aims to serve
+                        as a dependable support system for marginalized communities, fostering sustainable
+                        development and empowerment.
+                   </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        As a registered non-profit organization with the
+                        Department of Social Development, and approved as a Section 18A Public Benefit
+                        Organization by the South African Revenue Service, Lefika Hearts NPC is committed to
+                        breaking the cycles of poverty and inequality through education, skills training,
+                        humanitarian relief, and community-building initiatives.                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        From its operational base in Moletsane, Lefika Hearts NPC mobilizes communities
+                        toward sustainable and responsible development. The organization seeks to inspire
+                        individuals and communities to realize their full potential, creating a brighter future for
+                        generations to come.   
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Values -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Mission -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="text-5xl text-gold mb-4 text-center">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark-green mb-4 text-center">Our Mission</h3>
+                        <p class="text-gray-700 leading-relaxed text-center">
+                            To provide innovative, impactful, and inclusive programs that empower individuals,
+                            communities, and contribute to the socio-economic development of South Africa.                        
+                        </p>
+                    </div>
+                    
+                    <!-- Vision -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="text-5xl text-gold mb-4 text-center">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark-green mb-4 text-center">Our Vision</h3>
+                        <p class="text-gray-700 leading-relaxed text-center">
+                            To build a compassionate and empowered society where individuals and
+                            communities thrive through unity, hope, and sustainable development.                       
+                        </p>
+                    </div>
+                    
+                    <!-- Values -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="text-5xl text-gold mb-4 text-center">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark-green mb-4 text-center">Our Values</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li><i class="fas fa-check text-gold mr-2"></i> Strength</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i> Compassion</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i> Integrity</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i> Empowerment</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i> Diversity</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i> Sustainability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Core Values Detailed -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-12 text-center">
+                Our Core Values
+            </h2>
+
+            <div class="space-y-8">
+
+                <!-- Strength -->
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-4xl text-gold flex-shrink-0">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark-green mb-2">Strength</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Acting as a rock-solid foundation for those in need, providing stability, support, and hope in times of hardship.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Compassion -->
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-4xl text-gold flex-shrink-0">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark-green mb-2">Compassion</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Serving communities with love and empathy, ensuring dignity, care, and understanding guide every action we take.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Integrity -->
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-4xl text-gold flex-shrink-0">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark-green mb-2">Integrity</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Upholding transparency and accountability in all our initiatives, ensuring trust with donors, partners, and the communities we serve.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Empowerment -->
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-4xl text-gold flex-shrink-0">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark-green mb-2">Empowerment</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Enabling individuals to build self-sufficient and resilient futures through education, skills development, and opportunity.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Diversity -->
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-4xl text-gold flex-shrink-0">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark-green mb-2">Diversity</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Embracing and celebrating the rich cultural tapestry of South Africa, fostering inclusion, respect, and unity across all communities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sustainability -->
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-4xl text-gold flex-shrink-0">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-dark-green mb-2">Sustainability</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Promoting responsible development that benefits both present and future generations through long-term, impactful solutions.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-gold to-yellow-500">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-6">Join Our Mission</h2>
+            <p class="text-lg text-dark-green mb-8 max-w-2xl mx-auto">Be part of the change. Together, we can build stronger communities and create a brighter future for all.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="get-involved.html" class="bg-dark-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-light-green transition">Get Involved</a>
+                <a href="contact.html" class="bg-white text-dark-green px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-white text-gray-700 py-12 border-t border-gray-200">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+            <!-- Brand -->
+            <div>
+                <img src="Lefika Hearts Pics/Lefikahearts Logo-01.png"
+                     alt="Lefika Hearts Logo"
+                     class="h-32 w-auto mb-4">
+                <p class="text-gray-600">
+                    Building Stronger Communities, One Heart at a Time
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-gold transition">About Us</a></li>
+                    <li><a href="programs.html" class="hover:text-gold transition">Programs</a></li>
+                    <li><a href="impact.html" class="hover:text-gold transition">Impact</a></li>
+                    <li><a href="transparency.html" class="hover:text-gold transition">Transparency</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Involved -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Get Involved</h4>
+                <ul class="space-y-2">
+                    <li><a href="get-involved.html" class="hover:text-gold transition">Donate</a></li>
+                    <li><a href="get-involved.html#volunteer" class="hover:text-gold transition">Volunteer</a></li>
+                    <li><a href="get-involved.html#partner" class="hover:text-gold transition">Partner</a></li>
+                    <li><a href="contact.html" class="hover:text-gold transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4 text-dark-green">
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-200 pt-6 text-center text-gray-500 text-sm">
+            <p>
+                &copy; 2025 Lefika Hearts. All rights reserved. |
+                Registered NPO | Section 18A Certified
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+

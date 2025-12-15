@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Lefika Hearts</title>
+    <meta name="description" content="Support Lefika Hearts through donations, volunteering, partnerships, or sponsorships. Make a difference in communities across South Africa.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1a4d3a',
+                        'gold': '#d4af37',
+                        'light-green': '#2d5a47',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="bg-white text-dark-green shadow sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+        <div class="relative flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img 
+                    src="Lefika Hearts Pics/Lefikahearts Logo-01.png" 
+                    alt="Lefika Hearts Logo" 
+                    class="h-24 w-auto object-contain -my-6"
+                />
+            </a>
+
+            <!-- Center Navigation -->
+            <ul class="hidden md:flex items-center space-x-8 
+                       absolute left-2/4 transform -translate-x-2/4">
+                <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-gold transition">About</a></li>
+                <li><a href="programs.html" class="hover:text-gold transition">Programs</a></li>
+                <li><a href="impact.html" class="hover:text-gold transition">Impact</a></li>
+                <li><a href="gallery.html" class="hover:text-gold transition">Gallery</a></li>
+                <li><a href="transparency.html" class="hover:text-gold transition">Transparency</a></li>
+                <li><a href="contact.html" class="hover:text-gold transition">Contact</a></li>
+            </ul>
+
+            <!-- Right CTAs -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="get-involved.html" 
+                   class="border bg-dark-green border-dark-green text-white px-4 py-2 rounded-lg 
+                          hover:bg-dark-green hover:text-white transition">
+                    Get Involved
+                </a>
+                <a href="get-involved.html" 
+                   class="bg-gold text-dark-green px-5 py-2 rounded-lg font-semibold 
+                          hover:bg-opacity-90 transition">
+                    Donate
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-dark-green" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul class="hidden md:hidden pb-4 space-y-3 text-dark-green" id="mobile-menu">
+            <li><a href="index.html" class="block hover:text-gold">Home</a></li>
+            <li><a href="about.html" class="block hover:text-gold">About</a></li>
+            <li><a href="programs.html" class="block hover:text-gold">Programs</a></li>
+            <li><a href="impact.html" class="block hover:text-gold">Impact</a></li>
+            <li><a href="gallery.html" class="block hover:text-gold">Gallery</a></li>
+            <li><a href="transparency.html" class="block hover:text-gold">Transparency</a></li>
+            <li><a href="contact.html" class="block hover:text-gold">Contact</a></li>
+
+            <li class="pt-3">
+                <a href="get-involved.html" 
+                   class="block border border-dark-green px-4 py-2 rounded-lg text-center">
+                    Get Involved
+                </a>
+            </li>
+            <li>
+                <a href="get-involved.html" 
+                   class="block bg-gold text-dark-green px-4 py-2 rounded-lg text-center font-semibold">
+                    Donate
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-dark-green to-light-green text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-center">Get Involved</h1>
+            <p class="text-xl text-center mt-4 text-gray-200">Join us in building stronger communities, one heart at a time</p>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="text-5xl text-gold mb-4">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-4">Make a Donation</h2>
+                    <p class="text-lg text-gray-700">Your donation helps us continue our mission and reach more communities in need. As a registered NPO with Section 18A status, your donations are tax-deductible.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg mb-8">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6">Choose Your Donation Amount</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <button class="donation-amount bg-white border-2 border-gray-300 py-4 rounded-lg font-semibold text-dark-green hover:border-gold hover:bg-gold hover:text-white transition" data-amount="100">R100</button>
+                        <button class="donation-amount bg-white border-2 border-gray-300 py-4 rounded-lg font-semibold text-dark-green hover:border-gold hover:bg-gold hover:text-white transition" data-amount="250">R250</button>
+                        <button class="donation-amount bg-white border-2 border-gray-300 py-4 rounded-lg font-semibold text-dark-green hover:border-gold hover:bg-gold hover:text-white transition" data-amount="500">R500</button>
+                        <button class="donation-amount bg-white border-2 border-gray-300 py-4 rounded-lg font-semibold text-dark-green hover:border-gold hover:bg-gold hover:text-white transition" data-amount="1000">R1,000</button>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-dark-green font-semibold mb-2">Custom Amount (ZAR)</label>
+                        <input type="number" id="custom-amount" placeholder="Enter amount" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-dark-green font-semibold mb-2">Select Program (Optional)</label>
+                        <select class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
+                            <option>General Donation</option>
+                            <option>NextGen IT Program</option>
+                            <option>Walk With Pride</option>
+                            <option>Hearts of Provision</option>
+                            <option>Food Security & Gardening</option>
+                            <option>Women & Youth Empowerment</option>
+                            <option>Community Upliftment</option>
+                        </select>
+                    </div>
+                    <button class="w-full bg-gold text-dark-green py-4 rounded-lg font-bold text-xl hover:bg-opacity-90 transition" onclick="processDonation()">
+                        Donate Now
+                    </button>
+                    <p class="text-sm text-gray-600 mt-4 text-center">
+                        <i class="fas fa-shield-alt text-gold mr-2"></i>
+                        Secure payment processing. All transactions are encrypted and secure.
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2 text-center">
+                        <i class="fas fa-file-invoice text-gold mr-2"></i>
+                        Section 18A tax certificates will be issued for qualifying donations.
+                    </p>
+                </div>
+
+                <div class="bg-white border-2 border-gold p-6 rounded-lg">
+                    <h4 class="font-bold text-dark-green mb-3"><i class="fas fa-info-circle text-gold mr-2"></i>Banking Details</h4>
+                    <p class="text-gray-700 mb-2">For direct bank transfers, please use the following details:</p>
+                    <div class="bg-gray-50 p-4 rounded font-mono text-sm">
+                        <p class="mb-1"><strong>Bank:</strong> [Bank Name]</p>
+                        <p class="mb-1"><strong>Account Name:</strong> Lefika Hearts</p>
+                        <p class="mb-1"><strong>Account Number:</strong> [Account Number]</p>
+                        <p class="mb-1"><strong>Branch Code:</strong> [Branch Code]</p>
+                        <p class="mb-1"><strong>Reference:</strong> Your name + Donation</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Please email your proof of payment to <a href="mailto:info@lefikahearts.org" class="text-gold hover:underline">info@lefikahearts.org</a> to receive your Section 18A certificate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section id="volunteer" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="text-5xl text-gold mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-4">Volunteer With Us</h2>
+                    <p class="text-lg text-gray-700">Your time and skills can make a profound difference. Join our volunteer community and be part of positive change.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6">Volunteer Opportunities</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-gold pl-4">
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Program Support</h4>
+                            <p class="text-gray-700">Assist with our various programs including IT training, feeding schemes, and community events.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Administrative Support</h4>
+                            <p class="text-gray-700">Help with office tasks, data entry, communication, and coordination activities.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Event Coordination</h4>
+                            <p class="text-gray-700">Assist in organizing and running community events, distributions, and awareness campaigns.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Skills-Based Volunteering</h4>
+                            <p class="text-gray-700">Share your professional expertise in areas like marketing, web development, accounting, legal, or other specialized fields.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6">Volunteer Registration Form</h3>
+                    <form class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">First Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
+                            </div>
+                            <div>
+                                <label class="block text-dark-green font-semibold mb-2">Last Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-dark-green font-semibold mb-2">Email Address *</label>
+                            <input type="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
+                        </div>
+                        <div>
+                            <label class="block text-dark-green font-semibold mb-2">Phone Number *</label>
+                            <input type="tel" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
+                        </div>
+                        <div>
+                            <label class="block text-dark-green font-semibold mb-2">Area of Interest *</label>
+                            <select required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
+                                <option value="">Select an area</option>
+                                <option>Program Support</option>
+                                <option>Administrative Support</option>
+                                <option>Event Coordination</option>
+                                <option>Skills-Based (Specify in message)</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-dark-green font-semibold mb-2">Availability</label>
+                            <textarea rows="3" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold" placeholder="Tell us about your availability (e.g., weekdays, weekends, specific days)"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-dark-green font-semibold mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold" placeholder="Tell us about yourself and why you'd like to volunteer"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-dark-green text-white py-4 rounded-lg font-semibold hover:bg-light-green transition">
+                            Submit Volunteer Application
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <section id="partner" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="text-5xl text-gold mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-4">Partner With Us</h2>
+                    <p class="text-lg text-gray-700">Join forces with us to create greater impact. We welcome partnerships with businesses, organizations, and institutions.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg mb-8">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6">Partnership Opportunities</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="text-3xl text-gold mb-3">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Corporate Partnerships</h4>
+                            <p class="text-gray-700">Align your business with social impact through sponsorship, employee volunteering, or cause marketing initiatives.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="text-3xl text-gold mb-3">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Local and national government departments</h4>
+                            <p class="text-gray-700">Partner with us to bring programs directly to your school community, benefiting students and families.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="text-3xl text-gold mb-3">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">NGO Partnerships</h4>
+                            <p class="text-gray-700">Collaborate with other organizations to maximize resources and reach, creating synergies for greater impact.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="text-3xl text-gold mb-3">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">In-Kind Support</h4>
+                            <p class="text-gray-700">Donate goods, services, or resources that directly support our programs and operations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-gold p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6">Interested in Partnering?</h3>
+                    <p class="text-gray-700 mb-6">Please contact us to discuss partnership opportunities. We'd love to explore how we can work together to create positive change.</p>
+                    <a href="contact.html" class="inline-block bg-gold text-dark-green px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">
+                        Contact Us About Partnerships
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Section -->
+    <section id="sponsor" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="text-5xl text-gold mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-4">Sponsor an Initiative</h2>
+                    <p class="text-lg text-gray-700">Make a direct impact by sponsoring a specific program or initiative. See your contribution in action.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-dark-green mb-6">Sponsorship Opportunities</h3>
+                    <div class="space-y-4">
+                        <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-gold transition">
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Sponsor School Shoes</h4>
+                            <p class="text-gray-700 mb-3">Sponsor school shoes for a specific number of students. Each pair costs approximately R200.</p>
+                            <a href="contact.html" class="text-gold font-semibold hover:underline">Contact us to sponsor →</a>
+                        </div>
+                        <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-gold transition">
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Sponsor IT Training</h4>
+                            <p class="text-gray-700 mb-3">Sponsor IT training for a group of students, covering equipment, software, and instructor costs.</p>
+                            <a href="contact.html" class="text-gold font-semibold hover:underline">Contact us to sponsor →</a>
+                        </div>
+                        <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-gold transition">
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Sponsor a Feeding Program</h4>
+                            <p class="text-gray-700 mb-3">Sponsor meals for a school or community for a specific period, ensuring children have nutritious food.</p>
+                            <a href="contact.html" class="text-gold font-semibold hover:underline">Contact us to sponsor →</a>
+                        </div>
+                        <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-gold transition">
+                            <h4 class="text-xl font-semibold text-dark-green mb-2">Sponsor a Community Garden</h4>
+                            <p class="text-gray-700 mb-3">Sponsor the establishment and maintenance of a community garden, including seeds, tools, and training.</p>
+                            <a href="contact.html" class="text-gold font-semibold hover:underline">Contact us to sponsor →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-white text-gray-700 py-12 border-t border-gray-200">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+            <!-- Brand -->
+            <div>
+                <img src="Lefika Hearts Pics/Lefikahearts Logo-01.png"
+                     alt="Lefika Hearts Logo"
+                     class="h-32 w-auto mb-4">
+                <p class="text-gray-600">
+                    Building Stronger Communities, One Heart at a Time
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-gold transition">About Us</a></li>
+                    <li><a href="programs.html" class="hover:text-gold transition">Programs</a></li>
+                    <li><a href="impact.html" class="hover:text-gold transition">Impact</a></li>
+                    <li><a href="transparency.html" class="hover:text-gold transition">Transparency</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Involved -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Get Involved</h4>
+                <ul class="space-y-2">
+                    <li><a href="get-involved.html" class="hover:text-gold transition">Donate</a></li>
+                    <li><a href="get-involved.html#volunteer" class="hover:text-gold transition">Volunteer</a></li>
+                    <li><a href="get-involved.html#partner" class="hover:text-gold transition">Partner</a></li>
+                    <li><a href="contact.html" class="hover:text-gold transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4 text-dark-green">
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-200 pt-6 text-center text-gray-500 text-sm">
+            <p>
+                &copy; 2025 Lefika Hearts. All rights reserved. |
+                Registered NPO | Section 18A Certified
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Donation amount selection
+        document.querySelectorAll('.donation-amount').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.donation-amount').forEach(btn => {
+                    btn.classList.remove('bg-gold', 'text-white', 'border-gold');
+                    btn.classList.add('bg-white', 'text-dark-green', 'border-gray-300');
+                });
+                this.classList.add('bg-gold', 'text-white', 'border-gold');
+                this.classList.remove('bg-white', 'text-dark-green', 'border-gray-300');
+                document.getElementById('custom-amount').value = this.dataset.amount;
+            });
+        });
+
+        function processDonation() {
+            const amount = document.getElementById('custom-amount').value;
+            if (!amount || amount <= 0) {
+                alert('Please enter or select a donation amount.');
+                return;
+            }
+            // In a real implementation, this would redirect to a payment gateway
+            alert('Thank you for your donation! You will be redirected to the secure payment page.\n\nAmount: R' + amount);
+            // window.location.href = 'payment-gateway-url';
+        }
+    </script>
+</body>
+</html>
+
+
+
+

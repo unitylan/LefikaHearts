@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lefika Hearts - Building Stronger Communities, One Heart at a Time</title>
+    <meta name="description" content="Lefika Hearts is dedicated to building stronger communities through education, empowerment, and support initiatives.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1a4d3a',
+                        'gold': '#d4af37',
+                        'light-green': '#2d5a47',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="bg-white text-dark-green shadow sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+        <div class="relative flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img 
+                    src="Lefika Hearts Pics/Lefikahearts Logo-01.png" 
+                    alt="Lefika Hearts Logo" 
+                    class="h-24 w-auto object-contain -my-6"
+                />
+            </a>
+
+            <!-- Center Navigation -->
+            <ul class="hidden md:flex items-center space-x-8 
+                       absolute left-2/4 transform -translate-x-2/4">
+                <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-gold transition">About</a></li>
+                <li><a href="programs.html" class="hover:text-gold transition">Programs</a></li>
+                <li><a href="impact.html" class="hover:text-gold transition">Impact</a></li>
+                <li><a href="gallery.html" class="hover:text-gold transition">Gallery</a></li>
+                <li><a href="transparency.html" class="hover:text-gold transition">Transparency</a></li>
+                <li><a href="contact.html" class="hover:text-gold transition">Contact</a></li>
+            </ul>
+
+            <!-- Right CTAs -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="get-involved.html" 
+                   class="border border-dark-green px-4 py-2 rounded-lg 
+                          hover:bg-dark-green hover:text-white transition">
+                    Get Involved
+                </a>
+                <a href="get-involved.html" 
+                   class="bg-gold text-dark-green px-5 py-2 rounded-lg font-semibold 
+                          hover:bg-opacity-90 transition">
+                    Donate
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-dark-green" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul class="hidden md:hidden pb-4 space-y-3 text-dark-green" id="mobile-menu">
+            <li><a href="index.html" class="block hover:text-gold">Home</a></li>
+            <li><a href="about.html" class="block hover:text-gold">About</a></li>
+            <li><a href="programs.html" class="block hover:text-gold">Programs</a></li>
+            <li><a href="impact.html" class="block hover:text-gold">Impact</a></li>
+            <li><a href="gallery.html" class="block hover:text-gold">Gallery</a></li>
+            <li><a href="transparency.html" class="block hover:text-gold">Transparency</a></li>
+            <li><a href="contact.html" class="block hover:text-gold">Contact</a></li>
+
+            <li class="pt-3">
+                <a href="get-involved.html" 
+                   class="block border border-dark-green px-4 py-2 rounded-lg text-center">
+                    Get Involved
+                </a>
+            </li>
+            <li>
+                <a href="get-involved.html" 
+                   class="block bg-gold text-dark-green px-4 py-2 rounded-lg text-center font-semibold">
+                    Donate
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section 
+    class="relative bg-cover bg-center text-white py-20 md:py-32"
+    style="background-image: url('Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/012.jpg');"
+>
+    <!-- Dark Green Overlay -->
+    <div class="absolute inset-0 bg-dark-green/80"></div>
+
+    <div class="relative container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-left">
+
+            <!-- NPO Badge -->
+            <span class="inline-block mb-4 px-4 py-1 rounded-full 
+                         bg-gold/90 text-dark-green text-sm font-semibold tracking-wide">
+                Registered NPO
+            </span>
+
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Building Stronger Communities
+            </h1>
+
+            <p class="text-2xl md:text-3xl mb-4 text-gold font-semibold">
+                One Heart at a Time
+            </p>
+
+            <p class="text-lg md:text-xl mb-8 text-gray-200 max-w-3xl">
+                Empowering communities through education, support, and sustainable initiatives
+                that create lasting change.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="get-involved.html"
+                   class="bg-gold text-dark-green px-8 py-3 rounded-lg font-semibold
+                          hover:bg-opacity-90 transition transform hover:scale-105">
+                    Get Involved
+                </a>
+
+                <a href="about.html"
+                   class="bg-transparent border-2 border-gold text-gold px-8 py-3 rounded-lg font-semibold
+                          hover:bg-gold hover:text-dark-green transition">
+                    Learn More
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Key Programs -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-green text-center mb-12">Our Key Programs</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition hover:border-gold">
+                    <div class="text-4xl text-gold mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-green mb-3">NextGen IT Program</h3>
+                    <p class="text-gray-600 mb-4">Empowering the next generation with essential IT skills and digital literacy for future success.</p>
+                    <a href="programs.html#nextgen" class="text-gold font-semibold hover:underline">Learn more →</a>
+                </div>
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition hover:border-gold">
+                    <div class="text-4xl text-gold mb-4">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-green mb-3">Walk With Pride</h3>
+                    <p class="text-gray-600 mb-4">School Shoes Initiative providing quality footwear to children, ensuring dignity and comfort in their education journey.</p>
+                    <a href="programs.html#walk-with-pride" class="text-gold font-semibold hover:underline">Learn more →</a>
+                </div>
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition hover:border-gold">
+                    <div class="text-4xl text-gold mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-green mb-3">Hearts of Provision</h3>
+                    <p class="text-gray-600 mb-4">Feeding scheme addressing food security and ensuring no child goes hungry.</p>
+                    <a href="programs.html#hearts-provision" class="text-gold font-semibold hover:underline">Learn more →</a>
+                </div>
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition hover:border-gold">
+                    <div class="text-4xl text-gold mb-4">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-green mb-3">Food Security & Gardening</h3>
+                    <p class="text-gray-600 mb-4">Sustainable gardening projects teaching communities to grow their own food for long-term security.</p>
+                    <a href="programs.html#gardening" class="text-gold font-semibold hover:underline">Learn more →</a>
+                </div>
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition hover:border-gold">
+                    <div class="text-4xl text-gold mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-green mb-3">Women & Youth Empowerment</h3>
+                    <p class="text-gray-600 mb-4">Programs designed to uplift and empower women and youth with skills and opportunities.</p>
+                    <a href="programs.html#empowerment" class="text-gold font-semibold hover:underline">Learn more →</a>
+                </div>
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-xl transition hover:border-gold">
+                    <div class="text-4xl text-gold mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-green mb-3">Community Upliftment</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive community development initiatives creating lasting positive change.</p>
+                    <a href="programs.html#upliftment" class="text-gold font-semibold hover:underline">Learn more →</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="programs.html" class="bg-dark-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-light-green transition inline-block">View All Programs</a>
+            </div>
+        </div>
+    </section>
+
+<!-- About Us Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+            <div class="max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-4">
+                    About Lefika Hearts
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Lefika Hearts is a registered non-profit organisation dedicated to building
+                    stronger, more resilient communities through compassion, empowerment,
+                    and sustainable development.
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <a href="about.html"
+               class="mt-6 md:mt-0 inline-flex items-center border border-dark-green
+                      text-dark-green px-6 py-3 rounded-lg font-semibold
+                      hover:bg-dark-green hover:text-white transition">
+                Learn More About Us
+                <span class="ml-2">→</span>
+            </a>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <!-- Text -->
+            <div>
+                <p class="text-gray-600 mb-6">
+                    Founded with the belief that meaningful change starts at the heart of every
+                    community, Lefika Hearts works hand in hand with local leaders, volunteers,
+                    and partners to address real needs.
+                </p>
+                <p class="text-gray-600 mb-6">
+                    Our programmes focus on education, food security, youth development,
+                    and community upliftment — creating opportunities that empower individuals
+                    and restore dignity.
+                </p>
+                <p class="text-gray-600">
+                    Through transparency, collaboration, and compassion, we strive to create
+                    lasting impact that goes beyond short-term relief.
+                </p>
+            </div>
+
+            <!-- Image -->
+            <div>
+                <img 
+                    src="Lefika Hearts Pics/Isaacson Primary School - 04 November 2025 (Walk With Pride School Shoes Initiative)/026.jpg" 
+                    alt="About Lefika Hearts"
+                    class="rounded-2xl shadow-lg object-cover w-full h-full"
+                />
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-4">
+                Our Impact
+            </h2>
+            <p class="text-lg text-gray-600">
+                Real stories from communities and individuals whose lives have been transformed
+                through our programs and initiatives.
+            </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-14">
+
+            <!-- Left: Impact Stories (Dominant) -->
+            <div class="space-y-8">
+
+                <!-- Story Card -->
+                <div class="flex bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden">
+                    <img 
+                        src="Lefika Hearts Pics/Mochochonono Primary School - 25 July 2025 (Walk With Pride School Shoes Initiative)/023.jpg" 
+                        alt="Community Impact"
+                        class="w-56 object-cover"
+                    />
+                    <div class="p-8">
+                        <span class="text-sm text-gold font-semibold">
+                            July 2025
+                        </span>
+                        <h3 class="text-2xl font-semibold text-dark-green mt-3 mb-3">
+                            Feeding Hope in Rural Communities
+                        </h3>
+                        <p class="text-gray-600">
+                            Over 300 families received nutritious meals through our community feeding
+                            program, restoring dignity and hope across vulnerable households.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Story Card -->
+                <div class="flex bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden">
+                    <img 
+                        src="Lefika Hearts Pics/Mochochonono Primary School - 13 November 2025 Graduation Day/002.jpg" 
+                        alt="Youth Development"
+                        class="w-56 object-cover"
+                    />
+                    <div class="p-8">
+                        <span class="text-sm text-gold font-semibold">
+                            January 2024
+                        </span>
+                        <h3 class="text-2xl font-semibold text-dark-green mt-3 mb-3">
+                            Empowering Youth Through Education
+                        </h3>
+                        <p class="text-gray-600">
+                            Our after-school programs supported over 120 learners with tutoring,
+                            mentorship, and life skills training.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Read All -->
+                <a href="impact.html" 
+                   class="inline-flex items-center text-dark-green font-semibold hover:text-gold transition">
+                    Read all stories
+                    <span class="ml-2">→</span>
+                </a>
+
+            </div>
+
+            <!-- Right: Sticky Testimonial (Supportive) -->
+            <div class="relative">
+
+                <div class="sticky top-28 bg-white rounded-2xl shadow-lg p-8">
+
+                    <p class="text-lg text-gray-700 italic mb-6 leading-relaxed">
+                        “Lefika Hearts didn’t just support our community — they restored our belief
+                        that change is possible. The impact they’ve made will be felt for generations.”
+                    </p>
+
+                    <div class="flex items-center space-x-4">
+                        <img 
+                            src="Lefika Hearts Pics/testimonial.jpg" 
+                            alt="Community Member"
+                            class="w-14 h-14 rounded-full object-cover"
+                        />
+                        <div>
+                            <p class="font-semibold text-dark-green">
+                                Nomsa Dlamini
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                Community Leader, Limpopo
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-4">
+                Get Involved
+            </h2>
+            <p class="text-lg text-gray-600">
+                There are many ways to support our mission and help us build stronger communities,
+                one heart at a time.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Donate -->
+            <div class="bg-dark-green text-white rounded-2xl p-8 shadow-lg flex flex-col justify-between">
+                <div>
+                    <i class="fas fa-hand-holding-heart text-3xl text-gold mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Donate
+                    </h3>
+                    <p class="text-gray-200 mb-6">
+                        Your contribution helps fund vital programs that provide food, education,
+                        and support to those in need.
+                    </p>
+                </div>
+                <a href="get-involved.html"
+                   class="inline-block bg-gold text-dark-green px-6 py-3 rounded-lg font-semibold
+                          hover:bg-opacity-90 transition text-center">
+                    Donate Now
+                </a>
+            </div>
+
+            <!-- Volunteer -->
+            <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow hover:shadow-lg transition flex flex-col justify-between">
+                <div>
+                    <i class="fas fa-users text-3xl text-dark-green mb-6"></i>
+                    <h3 class="text-2xl font-semibold text-dark-green mb-4">
+                        Volunteer
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        Join our team on the ground and make a direct impact by giving your time,
+                        skills, and passion.
+                    </p>
+                </div>
+                <a href="get-involved.html"
+                   class="inline-block border border-dark-green text-dark-green px-6 py-3 rounded-lg
+                          hover:bg-dark-green hover:text-white transition text-center">
+                    Become a Volunteer
+                </a>
+            </div>
+
+            <!-- Partner -->
+            <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow hover:shadow-lg transition flex flex-col justify-between">
+                <div>
+                    <i class="fas fa-handshake text-3xl text-dark-green mb-6"></i>
+                    <h3 class="text-2xl font-semibold text-dark-green mb-4">
+                        Partner With Us
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        Collaborate with us as an organisation or business to expand our reach and
+                        create sustainable impact together.
+                    </p>
+                </div>
+                <a href="get-involved.html"
+                   class="inline-block border border-dark-green text-dark-green px-6 py-3 rounded-lg
+                          hover:bg-dark-green hover:text-white transition text-center">
+                    Partner With Us
+                </a>
+            </div>
+
+            <!-- Sponsor -->
+            <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow hover:shadow-lg transition flex flex-col justify-between">
+                <div>
+                    <i class="fas fa-bullhorn text-3xl text-dark-green mb-6"></i>
+                    <h3 class="text-2xl font-semibold text-dark-green mb-4">
+                        Sponsor an Initiative
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        Support a specific program or campaign and see the tangible difference your
+                        sponsorship makes.
+                    </p>
+                </div>
+                <a href="get-involved.html"
+                   class="inline-block border border-dark-green text-dark-green px-6 py-3 rounded-lg
+                          hover:bg-dark-green hover:text-white transition text-center">
+                    Sponsor a Program
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-gold to-yellow-500">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-green mb-6">Join Us in Making a Difference</h2>
+            <p class="text-lg text-dark-green mb-8 max-w-2xl mx-auto">Your support helps us continue our mission of building stronger communities. Whether you donate, volunteer, or partner with us, every contribution matters.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="get-involved.html" class="bg-dark-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-light-green transition">Donate Now</a>
+                <a href="contact.html" class="bg-white text-dark-green px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-white text-gray-700 py-12 border-t border-gray-200">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+            <!-- Brand -->
+            <div>
+                <img src="Lefika Hearts Pics/Lefikahearts Logo-01.png"
+                     alt="Lefika Hearts Logo"
+                     class="h-32 w-auto mb-4">
+                <p class="text-gray-600">
+                    Building Stronger Communities, One Heart at a Time
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-gold transition">About Us</a></li>
+                    <li><a href="programs.html" class="hover:text-gold transition">Programs</a></li>
+                    <li><a href="impact.html" class="hover:text-gold transition">Impact</a></li>
+                    <li><a href="transparency.html" class="hover:text-gold transition">Transparency</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Involved -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Get Involved</h4>
+                <ul class="space-y-2">
+                    <li><a href="get-involved.html" class="hover:text-gold transition">Donate</a></li>
+                    <li><a href="get-involved.html#volunteer" class="hover:text-gold transition">Volunteer</a></li>
+                    <li><a href="get-involved.html#partner" class="hover:text-gold transition">Partner</a></li>
+                    <li><a href="contact.html" class="hover:text-gold transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div>
+                <h4 class="font-bold text-gold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4 text-dark-green">
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-200 pt-6 text-center text-gray-500 text-sm">
+            <p>
+                &copy; 2025 Lefika Hearts. All rights reserved. |
+                Registered NPO | Section 18A Certified
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
