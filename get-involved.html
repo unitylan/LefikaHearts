@@ -156,17 +156,104 @@
                     </p>
                 </div>
 
+                <script>
+function processDonation() {
+    // Get the selected or custom amount
+    const selectedButton = document.querySelector('.donation-amount.selected');
+    const customAmount = document.getElementById('custom-amount').value;
+    let amount = customAmount ? parseFloat(customAmount) : selectedButton ? selectedButton.dataset.amount : 0;
+
+    if (amount <= 0) {
+        alert('Please select or enter a donation amount.');
+        return;
+    }
+
+    // Get selected program
+    const program = document.querySelector('select').value;
+
+    const payfastMerchantID = "16526557";
+    const payfastMerchantKey = "yywrmiv9yj9nt";
+
+    // Create a form dynamically
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://www.payfast.co.za/eng/process'; // PayFast live URL (use sandbox for testing)
+
+    // Merchant ID
+    let input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'merchant_id';
+    input.value = payfastMerchantID;
+    form.appendChild(input);
+
+    // Merchant Key
+    input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'merchant_key';
+    input.value = payfastMerchantKey;
+    form.appendChild(input);
+
+    // Amount
+    input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'amount';
+    input.value = amount;
+    form.appendChild(input);
+
+    // Item name (program)
+    input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'item_name';
+    input.value = program;
+    form.appendChild(input);
+
+    // Return and cancel URLs (replace with your own URLs)
+    input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'return_url';
+    input.value = 'https://yourwebsite.com/thank-you';
+    form.appendChild(input);
+
+    input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'cancel_url';
+    input.value = 'https://yourwebsite.com/donate';
+    form.appendChild(input);
+
+    // Optional: email address of donor (if you collect it)
+    // input = document.createElement('input');
+    // input.type = 'hidden';
+    // input.name = 'email_address';
+    // input.value = donorEmail;
+    // form.appendChild(input);
+
+    // Append form to body and submit
+    document.body.appendChild(form);
+    form.submit();
+}
+
+// Optional: handle selection UI
+document.querySelectorAll('.donation-amount').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.donation-amount').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        document.getElementById('custom-amount').value = '';
+    });
+});
+</script>
+
+
                 <div class="bg-white border-2 border-gold p-6 rounded-lg">
                     <h4 class="font-bold text-dark-green mb-3"><i class="fas fa-info-circle text-gold mr-2"></i>Banking Details</h4>
                     <p class="text-gray-700 mb-2">For direct bank transfers, please use the following details:</p>
                     <div class="bg-gray-50 p-4 rounded font-mono text-sm">
-                        <p class="mb-1"><strong>Bank:</strong> [Bank Name]</p>
+                        <p class="mb-1"><strong>Bank:</strong> Standard Bank</p>
                         <p class="mb-1"><strong>Account Name:</strong> Lefika Hearts</p>
-                        <p class="mb-1"><strong>Account Number:</strong> [Account Number]</p>
-                        <p class="mb-1"><strong>Branch Code:</strong> [Branch Code]</p>
+                        <p class="mb-1"><strong>Account Number:</strong> 0000010240589570</p>
+                        <p class="mb-1"><strong>Branch Code:</strong> 051001</p>
                         <p class="mb-1"><strong>Reference:</strong> Your name + Donation</p>
                     </div>
-                    <p class="text-sm text-gray-600 mt-4">Please email your proof of payment to <a href="mailto:info@lefikahearts.org" class="text-gold hover:underline">info@lefikahearts.org</a> to receive your Section 18A certificate.</p>
+                    <p class="text-sm text-gray-600 mt-4">Please email your proof of payment to <a href="mailto:donations@lefikahearts.org.za" class="text-gold hover:underline">donations@lefikahearts.org.za</a> to receive your Section 18A certificate.</p>
                 </div>
             </div>
         </div>
@@ -394,16 +481,19 @@
             <div>
                 <h4 class="font-bold text-gold mb-4">Connect With Us</h4>
                 <div class="flex space-x-4 text-dark-green">
-                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Facebook">
+                    <a href="https://youtube.com/@lefikahearts" class="text-2xl hover:text-gold transition" aria-label="Facebook">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://web.facebook.com/p/Lefika-Hearts" class="text-2xl hover:text-gold transition" aria-label="Facebook">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="Instagram">
+                    <a href="https://www.instagram.com/lefikahearts" class="text-2xl hover:text-gold transition" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/lefika-hearts-npc" class="text-2xl hover:text-gold transition" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="text-2xl hover:text-gold transition" aria-label="TikTok">
+                    <a href="https://www.tiktok.com/@lefikahearts" class="text-2xl hover:text-gold transition" aria-label="TikTok">
                         <i class="fab fa-tiktok"></i>
                     </a>
                 </div>
@@ -415,7 +505,8 @@
         <div class="border-t border-gray-200 pt-6 text-center text-gray-500 text-sm">
             <p>
                 &copy; 2025 Lefika Hearts. All rights reserved. |
-                Registered NPO | Section 18A Certified
+                CiPC: 123456 | PBO: 789012 | NPO: 345678 | 
+                <a href="http://www.unitylan.co.za" class="text-blue-500 hover:underline">Created by UnityLan</a>
             </p>
         </div>
     </div>
