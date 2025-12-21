@@ -181,7 +181,8 @@ function processDonation() {
     // Create a form dynamically
     const form = document.createElement('form');
     form.method = 'POST';
-    form.action = 'https://www.payfast.co.za/eng/process'; // PayFast live URL (use sandbox for testing)
+   // form.action = 'https://www.payfast.co.za/eng/process'; // PayFast live URL (use sandbox for testing)
+    form.action = 'https://sandbox.payfast.co.za/eng/process'; // PayFast live URL (use sandbox for testing)
 
     // Merchant ID
     let input = document.createElement('input');
