@@ -158,6 +158,55 @@
 
                 <script>
 function processDonation() {
+    const selectedButton = document.querySelector('.donation-amount.selected');
+    const customAmount = document.getElementById('custom-amount').value;
+
+    let amount = customAmount
+        ? parseFloat(customAmount)
+        : selectedButton
+        ? parseFloat(selectedButton.dataset.amount)
+        : 0;
+
+    if (amount <= 0) {
+        alert("Please select or enter a donation amount.");
+        return;
+    }
+
+    const program = document.querySelector('select').value;
+
+    // ✅ PayFast Sandbox credentials
+    const merchant_id = "10000100";
+    const merchant_key = "46f0cd694581a";
+
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "https://sandbox.payfast.co.za/eng/process";
+
+    const fields = {
+        merchant_id,
+        merchant_key,
+        amount: amount.toFixed(2),
+        item_name: program,
+        return_url: "https://unitylan.github.io/LefikaHearts/thank-you.html",
+        cancel_url: "https://unitylan.github.io/LefikaHearts/donate.html",
+        notify_url: "https://unitylan.github.io/LefikaHearts/notify.html"
+    };
+
+    for (const key in fields) {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = fields[key];
+        form.appendChild(input);
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
+</script>
+
+                <!--<script>
+function processDonation() {
     // Get the selected or custom amount
     const selectedButton = document.querySelector('.donation-amount.selected');
     const customAmount = document.getElementById('custom-amount').value;
@@ -245,7 +294,7 @@ document.querySelectorAll('.donation-amount').forEach(btn => {
         document.getElementById('custom-amount').value = '';
     });
 });
-</script>
+</script>-->
 
 
                 <div class="bg-white border-2 border-gold p-6 rounded-lg">
