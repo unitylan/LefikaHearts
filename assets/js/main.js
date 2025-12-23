@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 // Formspree AJAX submission (no redirect)
-const forms = document.querySelectorAll('.formspree-form');
+const forms = document.querySelectorAll('.form');
 
 forms.forEach(form => {
     form.addEventListener('submit', async function (e) {
