@@ -31,15 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form validation and submission
-    // Formspree form submission
-const forms = document.querySelectorAll('.form');
+// Formspree AJAX submission (no redirect)
+const forms = document.querySelectorAll('.formspree-form');
 
 forms.forEach(form => {
     form.addEventListener('submit', async function (e) {
-        e.preventDefault();
+        e.preventDefault(); // stop Formspree redirect
 
-        // Basic HTML5 validation
+        // Native validation
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
@@ -55,7 +54,7 @@ forms.forEach(form => {
 
         try {
             const response = await fetch(form.action, {
-                method: form.method || 'POST',
+                method: 'POST',
                 body: formData,
                 headers: {
                     'Accept': 'application/json'
@@ -64,9 +63,9 @@ forms.forEach(form => {
 
             if (response.ok) {
                 alert('Thank you for your submission! We will be in touch soon.');
-                form.reset();
+                form.reset(); // reset ONLY after success
             } else {
-                alert('Something went wrong. Please try again.');
+                alert('Submission failed. Please try again.');
             }
         } catch (error) {
             alert('Network error. Please check your connection.');
