@@ -118,40 +118,77 @@
                     <!-- Contact Form -->
                     <div>
                         <h2 class="text-3xl font-bold text-dark-green mb-6">Send Us a Message</h2>
-                        <form class="space-y-4">
-                            <div>
-                                <label class="block text-dark-green font-semibold mb-2">Name *</label>
-                                <input type="text" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
-                            </div>
-                            <div>
-                                <label class="block text-dark-green font-semibold mb-2">Email Address *</label>
-                                <input type="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
-                            </div>
-                            <div>
-                                <label class="block text-dark-green font-semibold mb-2">Phone Number</label>
-                                <input type="tel" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
-                            </div>
-                            <div>
-                                <label class="block text-dark-green font-semibold mb-2">Subject *</label>
-                                <select required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold">
-                                    <option value="">Select a subject</option>
-                                    <option>General Inquiry</option>
-                                    <option>Donation Inquiry</option>
-                                    <option>Volunteer Opportunity</option>
-                                    <option>Partnership Inquiry</option>
-                                    <option>Program Information</option>
-                                    <option>Media Inquiry</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-dark-green font-semibold mb-2">Message *</label>
-                                <textarea rows="6" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-gold text-dark-green py-4 rounded-lg font-semibold hover:bg-opacity-90 transition">
-                                Send Message
-                            </button>
-                        </form>
+<form 
+  action="https://formspree.io/f/meejvrnp" 
+  method="POST" 
+  class="space-y-4"
+>
+    <input type="hidden" name="_subject" value="New Contact Message">
+
+    <div>
+        <label class="block text-dark-green font-semibold mb-2">Name *</label>
+        <input 
+          type="text" 
+          name="name"
+          required 
+          class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold"
+        >
+    </div>
+
+    <div>
+        <label class="block text-dark-green font-semibold mb-2">Email Address *</label>
+        <input 
+          type="email" 
+          name="email"
+          required 
+          class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold"
+        >
+    </div>
+
+    <div>
+        <label class="block text-dark-green font-semibold mb-2">Phone Number</label>
+        <input 
+          type="tel" 
+          name="phone"
+          class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold"
+        >
+    </div>
+
+    <div>
+        <label class="block text-dark-green font-semibold mb-2">Subject *</label>
+        <select 
+          name="subject"
+          required 
+          class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold"
+        >
+            <option value="">Select a subject</option>
+            <option>General Inquiry</option>
+            <option>Donation Inquiry</option>
+            <option>Volunteer Opportunity</option>
+            <option>Partnership Inquiry</option>
+            <option>Program Information</option>
+            <option>Media Inquiry</option>
+            <option>Other</option>
+        </select>
+    </div>
+
+    <div>
+        <label class="block text-dark-green font-semibold mb-2">Message *</label>
+        <textarea 
+          rows="6" 
+          name="message"
+          required 
+          class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-gold"
+        ></textarea>
+    </div>
+
+    <button 
+      type="submit" 
+      class="w-full bg-gold text-dark-green py-4 rounded-lg font-semibold hover:bg-opacity-90 transition"
+    >
+        Send Message
+    </button>
+</form>
                     </div>
 
                     <!-- Contact Information -->
