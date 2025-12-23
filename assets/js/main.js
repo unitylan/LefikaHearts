@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
             // Add form submission logic here
             alert('Thank you for your submission! We will be in touch soon.');
             form.reset();
